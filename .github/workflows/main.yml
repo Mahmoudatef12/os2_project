@@ -22,3 +22,6 @@ jobs:
           username: ${{ secrets.DOCKER_NAME }}
           password: ${{ secrets.DOCKER_PASS }}
 
+      - name: "build and push"  
+        run: docker build -t ${{ secrets.DOCKER_NAME }}/myimage:latest . && docker push ${{ secrets.DOCKER_NAME }}/myimage:latest 
+
