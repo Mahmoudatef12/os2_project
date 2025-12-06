@@ -12,4 +12,6 @@ jobs:
 
     steps: 
       - name: "github actions"
-        run: pwd
+        run: ls 
+
+        uses: actions/checkout@v3
